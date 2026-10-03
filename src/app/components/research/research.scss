@@ -1,0 +1,80 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.group-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+  opacity: 0.9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: inherit;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+  text-align: left;
+}
+
+a.card {
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--accent-highlight);
+}
+
+.card-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card-body h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.venue {
+  font-size: 0.85rem;
+  color: var(--accent-highlight);
+  font-weight: 500;
+}
+
+.summary {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.5;
+  opacity: 0.85;
+}

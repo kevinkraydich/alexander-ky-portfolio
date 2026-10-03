@@ -1,0 +1,29 @@
+<h2 class="section-title">Resume</h2>
+
+<div class="tabs">
+  <div class="tab-buttons">
+    @for (tab of tabs; track tab.id) {
+      <button
+        type="button"
+        [class.active]="activeTab() === tab.id"
+        (click)="select(tab.id)"
+      >
+        {{ tab.label }}
+      </button>
+    }
+  </div>
+</div>
+
+<div class="tab-content">
+  <ul>
+    @for (entry of entriesFor(activeTab()); track entry.title) {
+      <li>
+        <span class="entry-title">{{ entry.title }}</span>
+        @if (entry.meta) {
+          <span class="entry-meta"> | {{ entry.meta }}</span>
+        }
+        <p>{{ entry.body }}</p>
+      </li>
+    }
+  </ul>
+</div>

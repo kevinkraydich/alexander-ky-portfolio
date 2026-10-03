@@ -1,0 +1,29 @@
+<h2 class="section-title">Research</h2>
+
+<h3 class="group-title">Publications</h3>
+<div class="grid">
+  @for (item of publications; track item.title) {
+    <a class="card" [attr.href]="item.link ?? null" target="_blank" rel="noopener">
+      <div class="card-icon"><i [class]="item.icon"></i></div>
+      <div class="card-body">
+        <h4>{{ item.title }}</h4>
+        <p class="venue">{{ item.venue }} · {{ item.year }}</p>
+        <p class="summary">{{ item.summary }}</p>
+      </div>
+    </a>
+  }
+</div>
+
+<h3 class="group-title">Presentations &amp; Posters</h3>
+<div class="grid">
+  @for (item of presentations; track item.title) {
+    <div class="card">
+      <div class="card-icon"><i [class]="item.icon"></i></div>
+      <div class="card-body">
+        <h4>{{ item.title }}</h4>
+        <p class="venue">{{ item.venue }} · {{ item.year }}</p>
+        <p class="summary">{{ item.summary }}</p>
+      </div>
+    </div>
+  }
+</div>

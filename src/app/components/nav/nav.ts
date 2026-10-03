@@ -11,8 +11,9 @@ export class NavComponent {
 
   readonly links = [
     { label: 'About', href: '#about' },
-    { label: 'Resume', href: '#resume' },
+    { label: 'Curriculum Vitae', href: '#resume' },
     { label: 'Research', href: '#research' },
+    { label: 'Hobbies', href: '#hobbies' },
     { label: 'Contact', href: '#contact' },
   ];
 }

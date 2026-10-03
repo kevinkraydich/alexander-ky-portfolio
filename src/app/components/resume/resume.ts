@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 
-type ResumeTab = 'education' | 'honors' | 'clinical';
+type ResumeTab = 'education' | 'honors' | 'awards' | 'clinical';
 
 interface ResumeEntry {
   title: string;
@@ -20,6 +20,7 @@ export class ResumeComponent {
   readonly tabs: Array<{ id: ResumeTab; label: string }> = [
     { id: 'education', label: 'Education' },
     { id: 'honors', label: 'Honors' },
+    { id: 'awards', label: 'Awards' },
     { id: 'clinical', label: 'Clinical Skills' },
   ];
 
@@ -64,6 +65,24 @@ export class ResumeComponent {
     },
   ];
 
+  readonly awards: ResumeEntry[] = [
+    {
+      title: "Chancellor's Award for Academic Excellence",
+      meta: '2022',
+      body: 'University-wide award recognizing the top graduating senior in the biological sciences.',
+    },
+    {
+      title: 'Best Medical Student Presentation',
+      meta: 'State Chapter — American College of Physicians, 2024',
+      body: 'Recognized for oral presentation on inpatient glycemic control protocols.',
+    },
+    {
+      title: 'Travel Award — National Medical Student Research Forum',
+      meta: '2023',
+      body: 'Awarded to present original research at the national forum.',
+    },
+  ];
+
   readonly clinical: ResumeEntry[] = [
     {
       title: 'Clinical Procedures',
@@ -89,6 +108,8 @@ export class ResumeComponent {
         return this.education;
       case 'honors':
         return this.honors;
+      case 'awards':
+        return this.awards;
       case 'clinical':
         return this.clinical;
     }

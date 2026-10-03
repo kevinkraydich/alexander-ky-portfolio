@@ -14,9 +14,10 @@ import { HeroComponent } from './components/hero/hero';
 import { AboutComponent } from './components/about/about';
 import { ResumeComponent } from './components/resume/resume';
 import { ResearchComponent } from './components/research/research';
+import { HobbiesComponent } from './components/hobbies/hobbies';
 import { ContactComponent } from './components/contact/contact';
 
-type SectionKey = 'home' | 'about' | 'resume' | 'research' | 'contact';
+type SectionKey = 'home' | 'about' | 'resume' | 'research' | 'hobbies' | 'contact';
 
 const DARK_SECTIONS: ReadonlySet<SectionKey> = new Set(['about', 'research']);
 
@@ -29,6 +30,7 @@ const DARK_SECTIONS: ReadonlySet<SectionKey> = new Set(['about', 'research']);
     AboutComponent,
     ResumeComponent,
     ResearchComponent,
+    HobbiesComponent,
     ContactComponent,
   ],
   templateUrl: './app.html',
@@ -44,6 +46,7 @@ export class App implements AfterViewInit {
   private readonly aboutRef = viewChild<ElementRef<HTMLElement>>('aboutSection');
   private readonly resumeRef = viewChild<ElementRef<HTMLElement>>('resumeSection');
   private readonly researchRef = viewChild<ElementRef<HTMLElement>>('researchSection');
+  private readonly hobbiesRef = viewChild<ElementRef<HTMLElement>>('hobbiesSection');
   private readonly contactRef = viewChild<ElementRef<HTMLElement>>('contactSection');
 
   ngAfterViewInit(): void {
@@ -66,6 +69,7 @@ export class App implements AfterViewInit {
       ['about', this.aboutRef()],
       ['resume', this.resumeRef()],
       ['research', this.researchRef()],
+      ['hobbies', this.hobbiesRef()],
       ['contact', this.contactRef()],
     ];
 

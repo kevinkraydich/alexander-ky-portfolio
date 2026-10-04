@@ -17,12 +17,35 @@
 <div class="tab-content">
   <ul>
     @for (entry of entriesFor(activeTab()); track entry.title) {
-      <li>
-        <span class="entry-title">{{ entry.title }}</span>
-        @if (entry.meta) {
-          <span class="entry-meta"> | {{ entry.meta }}</span>
+      <li [class.has-logo]="entry.logo">
+        @if (entry.logo) {
+          <img [src]="entry.logo.src" [alt]="entry.logo.alt" class="entry-logo" />
         }
-        <p>{{ entry.body }}</p>
+        <div class="entry-content">
+          <span class="entry-title">{{ entry.title }}</span>
+          @if (entry.meta) {
+            @if (entry.logo) {
+              <span class="entry-meta entry-meta-block">{{ entry.meta }}</span>
+            } @else {
+              <span class="entry-meta"> | {{ entry.meta }}</span>
+            }
+          }
+          @if (entry.body) {
+            <p>{{ entry.body }}</p>
+          }
+          @if (entry.groups) {
+            @for (group of entry.groups; track group.heading) {
+              <div class="entry-group">
+                <h5 class="entry-group-heading">{{ group.heading }}</h5>
+                <ul class="entry-group-list">
+                  @for (item of group.items; track item) {
+                    <li>{{ item }}</li>
+                  }
+                </ul>
+              </div>
+            }
+          }
+        </div>
       </li>
     }
   </ul>

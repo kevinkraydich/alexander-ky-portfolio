@@ -1,0 +1,13 @@
+<h2 class="section-title">Hobbies</h2>
+
+<div class="hobby-list">
+  @for (hobby of hobbies; track hobby.title) {
+    <div class="hobby-row">
+      <img [src]="hobby.image" [alt]="hobby.title" class="hobby-image" />
+      <div class="hobby-text">
+        <h4>{{ hobby.title }}</h4>
+        <p>{{ hobby.body }}</p>
+      </div>
+    </div>
+  }
+</div>

@@ -19,8 +19,6 @@ import { ContactComponent } from './components/contact/contact';
 
 type SectionKey = 'home' | 'about' | 'resume' | 'research' | 'hobbies' | 'contact';
 
-const DARK_SECTIONS: ReadonlySet<SectionKey> = new Set(['about', 'research']);
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -81,21 +79,11 @@ export class App implements AfterViewInit {
       if (rect.top < midpoint && rect.bottom > midpoint) {
         if (this.activeSection() !== key) {
           this.activeSection.set(key);
-          this.applyTheme(key);
         }
         break;
       }
     }
 
     this.navVisible.set(this.activeSection() !== 'home');
-  }
-
-  private applyTheme(key: SectionKey): void {
-    const body = document.body;
-    if (DARK_SECTIONS.has(key)) {
-      body.classList.add('theme-dark');
-    } else {
-      body.classList.remove('theme-dark');
-    }
   }
 }

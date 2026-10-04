@@ -17,16 +17,9 @@
   width: clamp(180px, 24vw, 260px);
   height: clamp(220px, 30vw, 320px);
   border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.about-portrait i {
-  font-size: 5rem;
-  color: var(--accent-highlight);
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.35);
 }
 
 .about-col {

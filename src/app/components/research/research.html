@@ -1,28 +1,40 @@
 <h2 class="section-title">Research</h2>
 
+<h3 class="group-title">Current Projects</h3>
+<div class="grid">
+  @for (item of currentProjects; track item.title) {
+    <div class="card">
+      <div class="card-body">
+        <h4>{{ item.title }}</h4>
+        <p class="venue">{{ item.venue }}</p>
+      </div>
+    </div>
+  }
+</div>
+
 <h3 class="group-title">Publications</h3>
 <div class="grid">
   @for (item of publications; track item.title) {
     <a class="card" [attr.href]="item.link ?? null" target="_blank" rel="noopener">
-      <div class="card-icon"><i [class]="item.icon"></i></div>
       <div class="card-body">
         <h4>{{ item.title }}</h4>
-        <p class="venue">{{ item.venue }} · {{ item.year }}</p>
-        <p class="summary">{{ item.summary }}</p>
+        <p class="venue">{{ item.journal }}</p>
+        <p class="venue-meta">{{ item.year }}</p>
       </div>
     </a>
   }
 </div>
 
-<h3 class="group-title">Presentations &amp; Posters</h3>
+<h3 class="group-title">Presentations &amp; Scholarly Works</h3>
 <div class="grid">
   @for (item of presentations; track item.title) {
     <div class="card">
-      <div class="card-icon"><i [class]="item.icon"></i></div>
       <div class="card-body">
         <h4>{{ item.title }}</h4>
-        <p class="venue">{{ item.venue }} · {{ item.year }}</p>
-        <p class="summary">{{ item.summary }}</p>
+        <p class="venue">{{ item.conference }}</p>
+        @if (item.location) {
+          <p class="venue-meta">{{ item.location }}</p>
+        }
       </div>
     </div>
   }

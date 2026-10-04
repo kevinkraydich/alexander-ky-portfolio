@@ -12,8 +12,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 1.5rem;
 }
 
 .card {
@@ -21,8 +21,8 @@
   gap: 1rem;
   padding: 1.25rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   color: inherit;
   transition:
     transform 0.3s ease,
@@ -37,21 +37,8 @@ a.card {
 
 .card:hover {
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.07);
-  border-color: var(--accent-highlight);
-}
-
-.card-icon {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  color: #ffffff;
-  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--accent-primary);
 }
 
 .card-body {
@@ -70,6 +57,12 @@ a.card {
   font-size: 0.85rem;
   color: var(--accent-highlight);
   font-weight: 500;
+}
+
+.venue-meta {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-weight: 400;
 }
 
 .summary {

@@ -332,11 +332,19 @@ export class ResumeComponent {
     },
     {
       title: 'Languages',
-      body: 'English — Native fluency. Khmer — Native fluency.',
+      bullets: [
+        'English — Native fluency',
+        'Khmer — Native fluency',
+      ],
     },
     {
       title: 'Professional Affiliations',
-      body: 'American Society of Anesthesiologists (ASA), American Medical Association (AMA), Asian Pacific American Medical Student Association (APAMSA), Michigan State Medical Society (MSMS).',
+      bullets: [
+        'American Society of Anesthesiologists (ASA)',
+        'American Medical Association (AMA)',
+        'Asian Pacific American Medical Student Association (APAMSA)',
+        'Michigan State Medical Society (MSMS)',
+      ],
     },
   ];
 

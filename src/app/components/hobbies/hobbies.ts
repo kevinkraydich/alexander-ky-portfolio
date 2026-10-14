@@ -16,17 +16,17 @@ export class HobbiesComponent {
   readonly hobbies: Hobby[] = [
     {
       title: 'Rowing',
-      body: 'Three seasons as a coxswain with the Michigan Men\'s Rowing Team, now coaching novice and intermediate rowers at the Grand Rapids Rowing Club.',
+      body: 'Former coxswain for the University of Michigan Men’s Rowing Team and freshman coach for the Grand Rapids Rowing Club High School/Junior Program.',
       image: 'images/rowing.jpg',
     },
     {
       title: 'Cooking',
-      body: 'Co-founded Side Door in Ann Arbor to share home-cooked food with a cultural twist. Still happiest trying new recipes with friends.',
+      body: 'I helped launch Side Door, a pop-up dining experience in Ann Arbor where I shared my love for food and culture. I also enjoy experimenting with molecular gastronomy, exploring new ingredients, and bringing friends together over a home-cooked meal.',
       image: 'images/cooking.png',
     },
     {
       title: 'Teaching & Mentoring',
-      body: 'Tutor math and physics through Nucleus Tutoring, coach West Ottawa Science Olympiad, and taught chemistry fundamentals via Quantum Physics for Kids.',
+      body: 'I’ve shared my passion for science and education by tutoring math and physics through Nucleus Tutoring, coaching West Ottawa Science Olympiad students, and introducing younger students to chemistry and physics through Quantum Physics for Kids.',
       image: 'images/mentoring.png',
     },
   ];

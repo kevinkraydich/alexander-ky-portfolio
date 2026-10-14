@@ -35,12 +35,14 @@ export class ResearchComponent {
       journal: 'J. Neuroimmune Pharmacol.',
       year: '2026',
       link: 'https://pubmed.ncbi.nlm.nih.gov/42842058/',
+      thumbnail: 'images/publications/dietarySupplementationWithOmega3.png',
     },
     {
       title: 'A Hydrogel Culture System Regulates Human Adipocyte Function',
       journal: 'Int. J. Mol. Sci.',
       year: '2025',
       link: 'https://pubmed.ncbi.nlm.nih.gov/41303352/',
+      thumbnail: 'images/publications/hydrogelCultureSystem.png',
     },
     {
       title:
@@ -48,12 +50,14 @@ export class ResearchComponent {
       journal: 'Ann Emerg Med.',
       year: '2025',
       link: 'https://doi.org/10.1016/j.annemergmed.2025.06.054',
+      thumbnail: 'images/publications/fortyThreeHazardousChemicalAccidents.png',
     },
     {
       title: 'Matrix Density Regulates Adipocyte Phenotype',
       journal: 'Adipocyte',
       year: '2023',
       link: 'https://pubmed.ncbi.nlm.nih.gov/37815174/',
+      thumbnail: 'images/publications/matrixDensity.png',
     },
     {
       title:
@@ -61,6 +65,7 @@ export class ResearchComponent {
       journal: 'Advanced Science',
       year: '2023',
       link: 'https://pubmed.ncbi.nlm.nih.gov/37526326/',
+      thumbnail: 'images/publications/adiposeMETTL14.png',
     },
     {
       title:
@@ -68,6 +73,7 @@ export class ResearchComponent {
       journal: 'Adipocyte',
       year: '2022',
       link: 'https://pubmed.ncbi.nlm.nih.gov/36457256/',
+      thumbnail: 'images/publications/lumicanModulatesAdipocyte.png',
     },
     {
       title:
@@ -75,6 +81,7 @@ export class ResearchComponent {
       journal: 'Sci Rep',
       year: '2021',
       link: 'https://pubmed.ncbi.nlm.nih.gov/34462518/',
+      thumbnail: 'images/publications/humanType2DiabetesSpecific.png',
     },
   ];
 

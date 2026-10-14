@@ -12,6 +12,7 @@ interface ResumeEntry {
   title: string;
   meta?: string;
   body?: string;
+  bullets?: string[];
   logo?: { src: string; alt: string };
   groups?: Array<{ heading: string; items: string[] }>;
 }
@@ -37,63 +38,84 @@ export class ResumeComponent {
   readonly education: ResumeEntry[] = [
     {
       title: 'Michigan State University — College of Human Medicine',
-      meta: 'M.D. Candidate with Public Health Certificate · Fall 2023 – Spring 2027',
-      body: 'Electives: Musculoskeletal (MSK), Microbiology, Lifestyle Medicine, Anesthesiology.',
+      meta: 'M.D. Candidate with Public Health Certificate · 08/2023 – 05/2027 · East Lansing, MI',
+      body: 'Electives: Musculoskeletal (MSK), Microbiology, Lifestyle Medicine, Anesthesiology',
       logo: { src: 'images/spartanLogo.png', alt: 'Michigan State University' },
     },
     {
-      title: 'University of Michigan, Ann Arbor',
-      meta: 'B.S. in Biochemistry, Minor in Applied Statistics · Fall 2018 – Spring 2022',
-      body: 'Literature, Science, and the Arts — Honors Program.',
+      title: 'University of Michigan',
+      meta: 'B.S. in Biochemistry, Minor in Applied Statistics · 08/2018 – 04/2022 · Ann Arbor, MI',
+      body: 'Literature, Science, and the Arts — Honors',
       logo: { src: 'images/michiganLogo.png', alt: 'University of Michigan' },
     },
   ];
 
   readonly experience: ResumeEntry[] = [
     {
-      title: 'Health Record Grader — MSU-CHM',
+      title: 'Health Record Grader',
       meta: '05/2026 – Present',
-      body: 'Graded H&P and SOAP notes written by medical students during their simulation lab and worked with them on how to improve in preparation for their clinical rotations.',
+      bullets: [
+        'Graded H&P and SOAP notes written by medical students during their simulation lab and worked with them on how to improve in preparation for their clinical rotations',
+      ],
     },
     {
-      title: 'Anatomy Lab Instructor — MSU-CHM',
+      title: 'Anatomy Lab Instructor',
       meta: '10/2024 – 03/2025',
-      body: 'Prepared cadavers by labeling key structures and held open lab hours for student questions.',
+      bullets: [
+        'Helped prepare cadavers by labeling key structures for anatomy lab',
+        'Held open lab hours for students to come and ask questions',
+      ],
     },
     {
-      title: 'Tutor — Nucleus Tutoring',
+      title: 'Nucleus Tutoring — Tutor',
       meta: '02/2024 – 04/2026',
-      body: 'Supported high school and college students in algebra, chemistry, and physics.',
+      bullets: [
+        'Provided support with subjects such as Algebra, Chemistry, and Physics for high school and college students',
+      ],
     },
     {
-      title: 'Student Admissions Ambassador — MSU-CHM',
+      title: 'Student Admissions Ambassador',
       meta: '08/2023 – 04/2024',
-      body: 'Interviewed applicants, led campus tours, and sat on panels for incoming medical students.',
+      bullets: [
+        'Interviewed medical school applicants',
+        'Conducted tours of the medical school campus and participated in panels for incoming medical students',
+      ],
     },
     {
-      title: 'Teacher — Quantum Physics for Kids',
+      title: 'Quantum Physics for Kids — Teacher',
       meta: '10/2022 – 01/2025',
-      body: 'Taught atomic structure and circuit fundamentals through an interactive gaming platform.',
+      bullets: [
+        'Used a gaming platform to teach chemistry fundamentals such as atomic structures and circuit making',
+      ],
     },
     {
-      title: 'Event Coach — West Ottawa Science Olympiad',
+      title: 'West Ottawa Science Olympiad — Event Coach',
       meta: '01/2022 – 05/2025',
-      body: 'Coached middle schoolers in anatomy & physiology, epidemiology, and chemistry for competition.',
+      bullets: [
+        'Taught middle school students anatomy and physiology, epidemiology, and chemistry in preparation for competitions',
+      ],
     },
     {
-      title: 'Medical Assistant — IHA West Arbor Pediatrics',
+      title: 'IHA West Arbor Pediatrics, Ann Arbor — Medical Assistant',
       meta: '01/2021 – 07/2023',
-      body: 'Administered vaccinations and medications, removed sutures, and maintained records in EPIC and MICR.',
+      bullets: [
+        'Performed procedures such as vaccinations, suture removals, and administration of medications while maintaining medical records accurately through EPIC and Michigan Care Improvement Registry (MICR)',
+      ],
     },
     {
-      title: 'Coxswain — Michigan Men’s Rowing Team',
+      title: 'Michigan Men’s Rowing Team, Ann Arbor — Coxswain',
       meta: '09/2019 – 12/2022',
-      body: 'Trained with freshman rowers while developing on-the-water leadership.',
+      bullets: [
+        'Trained with freshmen rowers as a coxswain to develop leadership experience',
+      ],
     },
     {
-      title: 'Residential Advisor — University of Michigan Housing',
+      title: 'University of Michigan Housing, Ann Arbor — Residential Advisor',
       meta: '08/2019 – 04/2021',
-      body: 'Guided 50+ freshmen through scheduling and interviews; built DEI-focused programming.',
+      bullets: [
+        'Guided over 50 freshmen through class scheduling and internship interviews',
+        'Developed multiple programs with strong turnouts that were based on diversity, equity, and inclusion values',
+      ],
     },
   ];
 
@@ -101,47 +123,74 @@ export class ResumeComponent {
     {
       title: 'MSU-CHM Continuous Quality Improvement (CQI) Committee',
       meta: '01/2026 – Present',
-      body: 'Monthly meetings with administration advising on student resource improvements.',
+      bullets: [
+        'Offered advice on improvement of student resources during monthly meetings with administration',
+      ],
     },
     {
-      title: 'Vice President — Lifestyle Medicine Interest Group (LMIG)',
+      title: 'Lifestyle Medicine Interest Group (LMIG) — Vice President',
       meta: '04/2024 – 02/2025',
-      body: 'Created a student elective on the core pillars of lifestyle medicine and ran community wellness events.',
+      bullets: [
+        'Created an elective to teach medical students the core pillars of lifestyle medicine',
+        'Organized events to help students and the community become active and engaged in a healthy lifestyle',
+      ],
     },
     {
-      title: 'Social Chair — Asian Pacific American Medical Student Association (APAMSA)',
+      title: 'Asian Pacific American Medical Student Association (APAMSA) — Social Chair',
       meta: '08/2023 – 02/2025',
-      body: 'Attended national conferences on APA health disparities and fostered community for incoming students.',
+      bullets: [
+        'Attended conferences and presentations regarding Asian Pacific Americans in medicine to learn about disparities and current research',
+        'Fostered a welcoming environment for incoming medical students',
+      ],
     },
     {
-      title: 'Officer — Grand Rapids Surgery Interest Group (GRSIG)',
+      title: 'Grand Rapids Surgery Interest Group (GRSIG) — Officer',
       meta: '08/2023 – 02/2025',
-      body: 'Led suture electives for medical students and taught suture technique at community outreach events.',
+      bullets: [
+        'Led suturing elective to medical students to help them prepare for rotations',
+        'Went out into the community to teach college students suture techniques and to answer questions about medical school',
+      ],
     },
     {
-      title: 'Officer — Emergency Medicine Interest Group (EMIG)',
+      title: 'Emergency Medicine Interest Group (EMIG) — Officer',
       meta: '08/2023 – 02/2025',
-      body: 'Hosted EM promotional events and invited practicing EM physicians to speak with students.',
+      bullets: [
+        'Hosted events to promote the field of emergency medicine',
+        'Invited EM doctors to come speak to students to share what it is like in the emergency room',
+      ],
     },
     {
-      title: 'Co-Founder — Side Door, Ann Arbor',
+      title: 'Side Door, Ann Arbor — Co-Founder',
       meta: '01/2023 – 08/2023',
-      body: 'Shared home-cooked food with a cultural twist, developing recipes through collaborations and classes.',
+      bullets: [
+        'Researched recipes and expanded cooking repertoire through collaborations and classes',
+        'Shared cultural understandings through home cooked foods with a cultural twist',
+      ],
     },
     {
-      title: 'Resstaff Coordinator — University of Michigan Housing',
+      title: 'University of Michigan Housing — Resstaff Coordinator',
       meta: '08/2021 – 05/2022',
-      body: 'Oversaw 40 residential advisors and advised hall council on community programming.',
+      bullets: [
+        'Oversaw 40 residential advisors to create an inclusive and well-run dormitory',
+        'Advised hall council to create events and promote community within the dorm',
+        'Addressed concerns and feedback with upper housing to help improve Resstaff',
+      ],
     },
     {
-      title: 'Chapter Secretary — Phi Sigma Kappa, Delta Deuteron',
+      title: 'Phi Sigma Kappa Fraternity — Delta Deuteron Chapter Secretary',
       meta: '01/2019 – 01/2022',
-      body: 'Maintained chapter records and attendance; supported Special Olympics philanthropy.',
+      bullets: [
+        'Maintained accurate chapter records and attendance',
+        'Participated in philanthropy events to support Special Olympics',
+      ],
     },
     {
-      title: 'Freshman Representative — Asian American Association',
+      title: 'Asian American Association — Freshman Representative',
       meta: '09/2018 – 05/2019',
-      body: 'Planned cultural and community-building events and recruited freshmen to campus programming.',
+      bullets: [
+        'Planned events that promoted cultural diversity and community building',
+        'Recruited freshmen to engage with ongoing campus events',
+      ],
     },
   ];
 
@@ -149,17 +198,23 @@ export class ResumeComponent {
     {
       title: 'Alpha Omega Alpha (AOA) Medical Honor Society',
       meta: '2026',
-      body: 'Awarded to 20% from each class in recognition of outstanding academic record, leadership, scholarship, and professionalism.',
+      bullets: [
+        'Awarded to 20% from each class in recognition of outstanding academic record, leadership, scholarship, and professionalism',
+      ],
     },
     {
       title: 'Gold Humanism Honor Society',
       meta: '2026',
-      body: 'Awarded to 15% from each class for demonstrating patient-centered care by modeling integrity, excellence, compassion, altruism, respect, and empathy.',
+      bullets: [
+        'Awarded to 15% from each class for demonstrating patient-centered care by modeling integrity, excellence, compassion, altruism, respect and empathy',
+      ],
     },
     {
       title: 'Medical Student Anesthesia Research Fellowship (MSARF)',
       meta: 'Foundation for Anesthesia Education and Research (FAER) · 2026',
-      body: 'Competitive, nationally awarded fellowship supporting medical student research in anesthesiology.',
+      bullets: [
+        'Competitive, nationally awarded fellowship supporting medical student research in anesthesiology',
+      ],
     },
     {
       title: 'Florence Gravelle Oberg Endowed Memorial Scholarship',
@@ -168,20 +223,21 @@ export class ResumeComponent {
     {
       title: 'Spartan Volunteer Service Award',
       meta: '2025',
-      body: 'Over 100 volunteer hours of direct community engagement and service.',
+      bullets: [
+        'Over 100 volunteer hours of direct community engagement and services',
+      ],
     },
     {
       title: 'West Michigan Medical Student Scholarship',
       meta: '2024',
     },
     {
-      title: 'The Richard and Helen Devos Scholarship',
-      meta: '2024',
-    },
-    {
-      title: 'Health Policy Case Competition — 1st Place & Anti-Racism and Economic Mobility Award',
+      title: 'Health Policy Case Competition',
       meta: '2022',
-      body: 'Proposed policy to improve healthcare access and reduce disparities in Michigan by addressing social determinants of health.',
+      body: 'Awards: 1st Place and Anti-Racism and Economic Mobility Award',
+      bullets: [
+        'Explored ways to improve healthcare access and reducing health disparities in Michigan by addressing social determinants of health as well as developing policy to implement it',
+      ],
     },
     {
       title: 'Phi Sigma Kappa National President’s Special Achievement Award for Campus Involvement',
@@ -192,37 +248,53 @@ export class ResumeComponent {
       meta: '2019',
     },
     {
-      title: 'Order of Omega Case Study Competition — 2nd Place',
+      title: 'Order of Omega Case Study Competition',
       meta: '2019',
-      body: 'Argued for restorative over punitive approaches to greek-life conduct scenarios.',
+      body: 'Award: 2nd Place',
+      bullets: [
+        'Investigated how to address scenarios involving greek-life on campus by proposing to use restorative practices rather than punitive measures to deal with situations',
+      ],
     },
   ];
 
   readonly service: ResumeEntry[] = [
     {
-      title: 'Volunteer — Wellness Services',
+      title: 'Wellness Services — Volunteer',
       meta: '04/2026 – Present',
-      body: 'Deliver harm-reduction care through a needle exchange program, including wound assessment and overdose-prevention education.',
+      bullets: [
+        'Delivered harm reduction care through a needle exchange program, including wound assessment and basic treatment for injection-related infections',
+        'Provided patient-centered education on overdose prevention and safer substance use',
+      ],
     },
     {
       title: 'Michigan State Medical Society',
       meta: '02/2026 – Present',
-      body: 'Wrote and sponsored a resolution to make preventative and routine care transportation accessible and patient-centered in Michigan.',
+      bullets: [
+        'Wrote and sponsored a resolution to make preventative and routine care transportation accessible, reliable, and patient-centered in Michigan',
+      ],
     },
     {
-      title: 'Volunteer — Battambang Provincial Referral Hospital',
+      title: 'Battambang Provincial Referral Hospital — Volunteer',
       meta: '05/2025 – 06/2025',
-      body: 'Assisted with patient triage, discharge education, and patient communication.',
+      bullets: [
+        'Assisted with patient triage, discharge education, and patient communication',
+      ],
     },
     {
-      title: 'Novice Coach — Grand Rapids Rowing Club',
+      title: 'Grand Rapids Rowing Club — Novice Coach',
       meta: '07/2024 – 05/2025',
-      body: 'Coached novice and intermediate rowers on stroke mechanics and teamwork in a supportive, team-first environment.',
+      bullets: [
+        'Fostered a supportive and collaborative environment to enhance athletes’ confidence, discipline, and sportsmanship',
+        'Coached novice and intermediate rowers on proper rowing techniques, stroke mechanics, and teamwork strategies to improve performance',
+      ],
     },
     {
-      title: 'Clinical Assistant — Hope Clinic',
+      title: 'Hope Clinic — Clinical Assistant',
       meta: '06/2022 – 03/2023',
-      body: 'Weekly volunteer providing care for underserved communities alongside social workers and specialists.',
+      bullets: [
+        'Volunteered once a week to help establish care for underserved communities',
+        'Worked with social workers and other specialists to provide well-rounded care',
+      ],
     },
   ];
 

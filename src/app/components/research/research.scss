@@ -41,10 +41,25 @@ a.card {
   border-color: var(--accent-primary);
 }
 
+.card.has-thumbnail {
+  align-items: flex-start;
+}
+
+.card-thumbnail {
+  flex-shrink: 0;
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
 .card-body {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  min-width: 0;
 }
 
 .card-body h4 {

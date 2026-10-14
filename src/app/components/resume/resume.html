@@ -33,6 +33,13 @@
           @if (entry.body) {
             <p>{{ entry.body }}</p>
           }
+          @if (entry.bullets) {
+            <ul class="entry-bullets">
+              @for (bullet of entry.bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
+          }
           @if (entry.groups) {
             @for (group of entry.groups; track group.heading) {
               <div class="entry-group">

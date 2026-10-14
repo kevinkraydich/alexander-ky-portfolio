@@ -106,6 +106,21 @@
   font-weight: 300;
 }
 
+.entry-bullets {
+  margin-top: 0.4rem;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  list-style: disc;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.entry-bullets li {
+  list-style: disc;
+}
+
 .entry-group {
   margin-top: 0.75rem;
 }

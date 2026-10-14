@@ -5,6 +5,7 @@ interface Publication {
   journal: string;
   year: string;
   link?: string;
+  thumbnail?: string;
 }
 
 interface Presentation {

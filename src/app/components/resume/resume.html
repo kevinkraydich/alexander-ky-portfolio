@@ -22,13 +22,18 @@
           <img [src]="entry.logo.src" [alt]="entry.logo.alt" class="entry-logo" />
         }
         <div class="entry-content">
-          <span class="entry-title">{{ entry.title }}</span>
-          @if (entry.meta) {
-            @if (entry.logo) {
+          @if (entry.logo) {
+            <span class="entry-title">{{ entry.title }}</span>
+            @if (entry.meta) {
               <span class="entry-meta entry-meta-block">{{ entry.meta }}</span>
-            } @else {
-              <span class="entry-meta"> | {{ entry.meta }}</span>
             }
+          } @else {
+            <div class="entry-headline">
+              <span class="entry-title">{{ entry.title }}</span>
+              @if (entry.meta) {
+                <span class="entry-meta"> | {{ entry.meta }}</span>
+              }
+            </div>
           }
           @if (entry.body) {
             <p>{{ entry.body }}</p>

@@ -50,11 +50,11 @@
 }
 
 .tab-content {
-  max-width: 820px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.tab-content ul {
+.tab-content > ul {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -83,6 +83,10 @@
   display: block;
 }
 
+.entry-headline {
+  white-space: nowrap;
+}
+
 .entry-title {
   color: var(--accent-primary);
   font-weight: 600;
@@ -109,16 +113,14 @@
 .entry-bullets {
   margin-top: 0.4rem;
   padding-left: 1.1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
   list-style: disc;
   font-weight: 300;
-  line-height: 1.55;
+  line-height: 1.35;
 }
 
 .entry-bullets li {
   list-style: disc;
+  margin: 0;
 }
 
 .entry-group {

@@ -25,15 +25,16 @@ interface CurrentProject {
   styleUrl: './research.scss',
 })
 export class ResearchComponent {
-  readonly currentProjects: CurrentProject[] = [
+  readonly currentProjects: CurrentProject[] = [];
+
+  readonly publications: Publication[] = [
     {
       title:
         'Dietary Supplementation with Omega-3 Fatty Acids Rescues Neurodevelopmental Deficits in a Combined Exposure Paradigm of Maternal Oxycodone Exposure and Chronic Stress',
-      venue: 'J. Neuroimmune Pharmacol. (Submitted) · 2026',
+      journal: 'J. Neuroimmune Pharmacol.',
+      year: '2026',
+      link: 'https://pubmed.ncbi.nlm.nih.gov/42842058/',
     },
-  ];
-
-  readonly publications: Publication[] = [
     {
       title: 'A Hydrogel Culture System Regulates Human Adipocyte Function',
       journal: 'Int. J. Mol. Sci.',

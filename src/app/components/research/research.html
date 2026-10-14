@@ -1,16 +1,18 @@
 <h2 class="section-title">Research</h2>
 
-<h3 class="group-title">Current Projects</h3>
-<div class="grid">
-  @for (item of currentProjects; track item.title) {
-    <div class="card">
-      <div class="card-body">
-        <h4>{{ item.title }}</h4>
-        <p class="venue">{{ item.venue }}</p>
+@if (currentProjects.length > 0) {
+  <h3 class="group-title">Current Projects</h3>
+  <div class="grid">
+    @for (item of currentProjects; track item.title) {
+      <div class="card">
+        <div class="card-body">
+          <h4>{{ item.title }}</h4>
+          <p class="venue">{{ item.venue }}</p>
+        </div>
       </div>
-    </div>
-  }
-</div>
+    }
+  </div>
+}
 
 <h3 class="group-title">Publications</h3>
 <div class="grid">
